@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: hackdemo 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: hackdemo 
+    spec:
+      containers:
+        - name: hackdemo 
+          image: sh360.azurecr.io/hackdemo 
+          ports:
+          - containerPort: 80
